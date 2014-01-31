@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= title
+    p= 'Create a new cat.'
+    form(method='GET')
+        input(type='text', name='catName', id='catName', placeholder='Name')
+        input(type='number', name='catAge', id='catAge', placeholder='Age')
+        textarea(name='catColors', placeholder='comma,separated,list,of,colors')
+        input(type='submit', value='Submit')
