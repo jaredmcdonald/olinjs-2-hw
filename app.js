@@ -30,6 +30,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/', function(req, res){
+    res.redirect('/cats');
+});
 app.get('/cats/new', routes.new);
 app.get('/cats', routes.list);
 app.get('/cats/color/:color', routes.filterByColor);
