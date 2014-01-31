@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1= title
+    if (msg)
+        div.message
+            p= msg
+    each cat, i in cats
+        div.cat
+            h3= cat.name
+            p= 'Age: ' + cat.age
+            p= 'colorz:'
+            ul.colors
+                each color, i in cat.colors
+                    li= color
+                    
+    a(href='/cats/new')= 'make a new kat'
