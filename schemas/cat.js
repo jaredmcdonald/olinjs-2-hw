@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var catSchema = mongoose.Schema({
+module.exports = mongoose.Schema({
     age: Number,
     colors: Array,
     name: String
